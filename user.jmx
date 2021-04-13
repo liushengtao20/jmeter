@@ -19,7 +19,7 @@
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time"></stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">${duration}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -94,6 +94,11 @@
             <elementProp name="duration" elementType="Argument">
               <stringProp name="Argument.name">duration</stringProp>
               <stringProp name="Argument.value">${_P(duration,10)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="rampup" elementType="Argument">
+              <stringProp name="Argument.name">rampup</stringProp>
+              <stringProp name="Argument.value">${_P(rampup,10)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>

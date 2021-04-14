@@ -16,11 +16,11 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${JuserCount}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time"></stringProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.num_threads">${userCount}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampUp}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">${JstillTime}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -28,19 +28,19 @@
       <hashTree>
         <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
           <collectionProp name="Arguments.arguments">
-            <elementProp name="JuserCount" elementType="Argument">
-              <stringProp name="Argument.name">JuserCount</stringProp>
-              <stringProp name="Argument.value">${__P(JuserCount,)}</stringProp>
+            <elementProp name="userCount" elementType="Argument">
+              <stringProp name="Argument.name">userCount</stringProp>
+              <stringProp name="Argument.value">${__P(userCount,)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="JstillTime" elementType="Argument">
-              <stringProp name="Argument.name">JstillTime</stringProp>
-              <stringProp name="Argument.value">${_P(JstillTime,10)}</stringProp>
+            <elementProp name="stillTime" elementType="Argument">
+              <stringProp name="Argument.name">stillTime</stringProp>
+              <stringProp name="Argument.value">${_P(stillTime,10)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="rampup" elementType="Argument">
-              <stringProp name="Argument.name">rampup</stringProp>
-              <stringProp name="Argument.value">${_P(rampup,10)}</stringProp>
+            <elementProp name="rampUp" elementType="Argument">
+              <stringProp name="Argument.name">rampUp</stringProp>
+              <stringProp name="Argument.value">${_P(rampUp,10)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>

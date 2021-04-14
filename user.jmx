@@ -21,7 +21,7 @@
         <stringProp name="ThreadGroup.num_threads">${userCount}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${rampUp}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${JstillTime}</stringProp>
+        <stringProp name="ThreadGroup.duration">${stillTime}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
